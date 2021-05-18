@@ -13,7 +13,7 @@ const addRoot = async (req, res, next) => {
             { _id: 'Databases', parent: 'Programming' },
             { _id: 'Languages', parent: 'Programming' },
             { _id: 'Programming', parent: 'Books' },
-            { _id: 'Books', parent: null },
+            { _id: 'root', parent: null },
         ]);
         res.status(200).json({
             success: true,
