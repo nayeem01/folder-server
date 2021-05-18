@@ -1,6 +1,5 @@
 import { RequestHandler } from 'express'
 import Folder from '../models/folder'
-import { folderTypes } from '../types/folder'
 
 export const addRoot: RequestHandler = async (req, res, next) => {
   try {
@@ -9,7 +8,7 @@ export const addRoot: RequestHandler = async (req, res, next) => {
       { _id: 'dbm', parent: 'Databases' },
       { _id: 'Databases', parent: 'Programming' },
       { _id: 'Languages', parent: 'Programming' },
-      { _id: 'Programming', parent: 'Books' },
+      { _id: 'Programming', parent: 'root' },
       { _id: 'root', parent: null },
     ])
     res.status(200).json({
