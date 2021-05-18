@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const folder_1 = require("../controller/folder");
+const router = express_1.Router();
+router.post('/addRoot', folder_1.addRoot);
+router.post('/addFolder', folder_1.addFolder);
+router.delete('/remove', folder_1.removeFolder);
+router.get('/', folder_1.read);
+exports.default = router;
